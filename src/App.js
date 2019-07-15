@@ -1,0 +1,51 @@
+import React from 'react';
+// import logo from './logo.svg';
+import './App.css';
+import { Component } from 'react';
+// import {
+//   BrowserRouter as Router,
+//   Route
+// } from 'react-router-dom';
+// import {withRouter} from 'react-router'
+// import {Redirect} from 'react-router'
+
+class App extends Component {
+
+  state = {
+    value: ``
+  }
+
+handleChange =(event) => {
+  this.setState(
+    {
+      value: event.target.value
+    }
+    )
+}
+
+handleSubmit=(event)=> {
+  console.log("A name was submitted: "+ this.state.value)
+  event.preventDefault();
+}
+
+  render(){
+    return (
+    
+    <div className="App">
+      <header className="App-header">
+        <form onSubmit={this.handleSubmit}>
+          <label>Summoner Name:
+            <br /> 
+            <input type="text" name="summoner" value={this.state.value} onChange={this.handleChange}/>
+          </label>
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </header>
+    </div>
+  
+  );
+
+}}
+
+export default App
