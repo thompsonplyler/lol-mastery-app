@@ -8,6 +8,7 @@ import { Component } from 'react';
 // } from 'react-router-dom';
 // import {withRouter} from 'react-router'
 // import {Redirect} from 'react-router'
+import champions from './data/champion.json'
 
 class App extends Component {
 
@@ -24,13 +25,17 @@ handleChange =(event) => {
 }
 
 handleSubmit=(event)=> {
-  fetch(`http://localhost:3000/api/v1/requests/?summoner_name=${this.state.value}`,
+  fetch(`http://localhost:3001/api/v1/requests/?summoner_name=${this.state.value}`,
   {method: "POST",
   mode: "cors"
   // headers: "Access-Control-Allow-Origin "
 })
   .then(r=>r.json())
-  .then(data=> console.log(data))
+  .then(data=> { 
+    console.log(data)
+    console.log(champions)
+  }
+  )
   event.preventDefault();
 }
 
