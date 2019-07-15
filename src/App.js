@@ -24,7 +24,13 @@ handleChange =(event) => {
 }
 
 handleSubmit=(event)=> {
-  console.log("A name was submitted: "+ this.state.value)
+  fetch(`http://localhost:3000/api/v1/requests/?summoner_name=${this.state.value}`,
+  {method: "POST",
+  mode: "cors"
+  // headers: "Access-Control-Allow-Origin "
+})
+  .then(r=>r.json())
+  .then(data=> console.log(data))
   event.preventDefault();
 }
 
