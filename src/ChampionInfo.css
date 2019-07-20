@@ -1,0 +1,35 @@
+  .Champion-Info-Container {
+    background-color: red;
+    min-height: 20vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+
+  .Chapion-Info-Box {
+      background-color: black;
+      border: 10em;
+      padding: 10em;
+      margin: 10em;
+      grid-column-start: 1
+
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
