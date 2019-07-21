@@ -27,22 +27,29 @@ class ChampInfo extends Component {
     champInfo = (data) => {
         console.log(data.length)
         return data.map((champion, index)=>{
+            console.log(champion)
             
-            let {championId, championLevel, championPoints} = champion
+            let {championId, championLevel, championPoints, tokensEarned} = champion
             let champName = C[championId]
             if (index < 3) {return <div className="Champion-Info-Box-Top">
-            <h4>{champName}</h4>
+                <div className='image-holder'>
             <img className='champ-icon-mastery' src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${championId}.png`} /><br/>
-            {/* <img className='champ-icon-mastery-top' src="/images/1.png" /> */}
-            Mastery Level: {championLevel}<br/>
-            Mastery Points: {championPoints}
+            <img className='champ-icon-mastery-top' src={`/images/${championLevel}.png`} />
+            </div>
+            <h4 className="name-holder">{champName}</h4>
+            <div className='info-holder'>Mastery Level: {championLevel}<br/>
+            Mastery Points: {championPoints}<br/>
+            {championLevel < 7 ? `Tokens: ${tokensEarned}` : null}
+            </div>
+            
         </div>}
         else {
             return <div className="Champion-Info-Box">
-             <h4>{champName}</h4>
-             <img className='champ-icon-mastery' src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${championId}.png`} /><br/>
-             Mastery Level: {championLevel}<br/>
-             Mastery Points: {championPoints}
+            <div className="image-holder"><img className='champ-icon-mastery' src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${championId}.png`} /></div>
+            <h4 className="name-holder">{champName}</h4>
+             <div className="champ-level">Mastery Level: {championLevel}</div>
+             <div className="champ-points">Mastery Points: {championPoints}</div>
+            {championLevel < 7 ? <div className="champ-tokens">{`Tokens: ${tokensEarned}`}</div> : null}
              </div>
              }
 
