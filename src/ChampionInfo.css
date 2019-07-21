@@ -1,5 +1,5 @@
   .Champion-Info-Container {
-    background-color: red;
+    background-color: orange;
     min-height: 20vh;
     flex-direction: column;
     align-items: center;
@@ -11,12 +11,13 @@
     
   }
 
-  .Chapion-Info-Box {
-      background-color: black;
-      border: 10em;
-      padding: 10em;
-      margin: 10em;
-      grid-column-start: 1
+  .Champion-Info-Box {
+      background-color: red;
+      /* border: 5em; */
+      padding: 10px;
+      box-shadow: 5px 5px 5px 5px black
+      
+      /* margin: 10em; */
 
   }
   

@@ -15,15 +15,16 @@ import * as bigData from '../data/champion.json'
 class ChampInfo extends Component {
 
     champInfo = (data) => {
-        console.log(bigData.default.data)
         return data.map(champion=>{
             
             let {championId, championLevel, championPoints} = champion
             let champName = C[championId]
 
-            // let champName = C.[champion.championId]
+            console.log(champName)
+            console.log(`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${championId}.png`)
             return <div className="Champion-Info-Box">
             {champName}<br />
+            <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${championId}.png`} /><br/>
             Mastery Level: {championLevel}<br/>
             Mastery Points: {championPoints}
 
@@ -34,7 +35,6 @@ class ChampInfo extends Component {
     
     render(){
         let {mastery_champs} = this.props
-        console.log(mastery_champs)
         return <div className="Champion-Info-Container">{this.champInfo(mastery_champs)}</div>
     }
 
