@@ -1,5 +1,23 @@
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url("./assets/fonts/adobe-garamond-pro-1166234.woff") format("woff");
+  }
+
+
+  @font-face {
+    font-family: "Gill Sans W04";
+    src: url("./assets/fonts/gill-sans-w04-book.woff") format("woff");
+    }
+
+  h4 {
+  font-family: "Adobe Garamond Pro", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  padding: 0px;
+  border: 1px;
+  margin: 5px
+}
+
   .Champion-Info-Container {
-    background-color: orange;
+    background-color: black;
     min-height: 20vh;
     flex-direction: column;
     align-items: center;
@@ -8,17 +26,49 @@
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    font-family: "Gill Sans W04", GillSans, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
 
   .Champion-Info-Box {
-      background-color: red;
-      /* border: 5em; */
-      padding: 10px;
-      box-shadow: 5px 5px 5px 5px black
-      
-      /* margin: 10em; */
+      background-color: #c7c7c7;
+      margin: 5px;
+      border: 5px;
+      border-style: solid;
+      border-color: #9c9c9c;
+      box-shadow: 2px 2px 2px 3px rgb(212, 212, 212);
+  }
 
+  .Champion-Info-Box-Top {
+    position: relative;
+    background-color: #c7c7c7;
+    margin: 5px;
+    border: 5px;
+    border-style: solid;
+    border-color: #9c9c9c;
+    box-shadow: 2px 2px 2px 3px rgb(212, 212, 212);
+    
+    
+    /* margin: 10em; */
+
+}
+
+  .champ-icon-mastery-top {
+    display: block;
+    justify-content: center;
+    z-index: 2; 
+    position: absolute;
+    top: 15px;
+    left: 200px;
+    /* max-width: 50% */
+  }
+
+  .champ-icon-mastery {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
   }
   
   .App-link {
