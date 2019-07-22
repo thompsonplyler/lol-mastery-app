@@ -21,7 +21,7 @@
     font-size: calc(10px + 2vmin);
     color: white;
     display: grid;
-    width: 90vw;
+    width: 95.5vw;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-row-gap: 5px;
@@ -43,17 +43,15 @@
 
   .Champion-Info-Box {
     background-color: #c7c7c7;
-    margin: 5px;
-    border: 5px;
+    /* margin: 5px;
+    border: 5px; */
     border-style: solid;
     border-color: #9c9c9c;
   }
 
   .CIB-Top {
     display: grid;
-    width: 30vw;
-    /* grid-template-rows: repeat(3, 1fr); */
-    /* grid-template-columns: repeat(4, 1fr) ; */
+    /* width: 26vw; */
     grid-template-areas: 
     "image name name name"
     "image info info info"
@@ -62,20 +60,13 @@
     max-height: 300px
 }
 
-  .CIB-Bottom {
-      /* grid-area: rest; */
-      
-      width: 90vw;
-  
-      grid-row: auto;
-      /* box-shadow: 2px 2px 2px rgb(212, 212, 212); */
+  .CIB-Bottom {    
+      width: 90vw; 
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr;
       grid-template-areas:
       "image name level level points points tokens";
-      max-height: 100px
-      
   }
 
 /* 
@@ -131,19 +122,11 @@ champion-icon-mastery is the code for the icon that sits under the emblem.
   }
 
   .champ-icon-mastery-bot {
-    padding-top: .9vh;
-    padding-left: .7vw;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    padding-left: .5vw;
     grid-column: 1;
     grid-row: 1;
     border-radius: 50%;
     width: 30%;
   }
-
-  .blue-container{
-    background-color: blue
-  }
-
-  .red-container {
-    background-color: red
-  }
-  

@@ -15,10 +15,10 @@ class BottomChamps extends Component {
                 <div className="image-holder">
                     <img className='champ-icon-mastery-bot' src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${championId}.png`} />
                 </div>
-                <h4 className="name-holder">{champName}</h4>
-                <div className="champ-level">Mastery Level: {championLevel}</div>
-                <div className="champ-points">Mastery Points: {championPoints}</div>
-                {championLevel < 7 ? <div className="champ-tokens">{`Tokens: ${tokensEarned}`}</div> : null}
+                <h5 className="name-holder">{champName}</h5>
+                <h5 className="champ-level">Mastery Level: {championLevel}</h5>
+                <h5 className="champ-points">Mastery Points: {championPoints}</h5>
+                {championLevel < 7 ? <h5 className="champ-tokens">{`Tokens: ${tokensEarned}`}</h5> : null}
             </li>
 
     })

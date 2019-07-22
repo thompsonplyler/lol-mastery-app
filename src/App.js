@@ -34,7 +34,7 @@ handleSubmit=(event)=> {
     submitted: true
   })
   // event.preventDefault();
-  fetch(`http://localhost:3002/api/v1/requests/?summoner_name=${this.state.value}`,{
+  fetch(`https://nameless-depths-56520.herokuapp.com/api/v1/requests/?summoner_name=${this.state.value}`,{
   method: "POST",
   mode: "cors",
   // headers: "Access-Control-Allow-Origin "
