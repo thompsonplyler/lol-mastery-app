@@ -13,6 +13,8 @@ class ChampInfo extends Component {
         let topChampArray = []
         let bottomChampArray = []
 
+        if (mastery_champs.length > 0) {
+
          mastery_champs.map((champion, index)=>{
 
             if (index < 3) {
@@ -28,6 +30,10 @@ class ChampInfo extends Component {
         <TopChamps top_champs={topChampArray}/>
         <BottomChamps bottom_champs={bottomChampArray}/>
     </div>
+    }
+    else {
+        return <div>Sorry, but there doesn't appear to be a summoner by that name.</div>
+    }
     
     }
     

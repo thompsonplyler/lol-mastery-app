@@ -30,14 +30,15 @@ handleChange =(event) => {
 
 handleSubmit=(event)=> {
   event.preventDefault()
+  
   this.setState({
     submitted: true
   })
-  // event.preventDefault();
+  
   fetch(`https://nameless-depths-56520.herokuapp.com/api/v1/requests/?summoner_name=${this.state.value}`,{
   method: "POST",
   mode: "cors",
-  // headers: "Access-Control-Allow-Origin "
+
 })
   .then(r=>r.json())
   .then(stats=> { 
@@ -45,22 +46,6 @@ handleSubmit=(event)=> {
   }
   )
 }
-// //     stats.forEach(champion => {
-// //       // let {championId} = champion
-// //       // console.log(championId)
-// //       // console.log(C[`${championId}`])
-// //       this.setState({
-// //         mastery_champs: stats
-// //       })
-      
-// //     });
-    
-// // })
-// //   .catch(error=> {
-// //     console.log("Fetch not successful. Here's your error:", error, `\n ${error}`)})
-//     event.preventDefault();
-
-// )}
 
   render(){
 

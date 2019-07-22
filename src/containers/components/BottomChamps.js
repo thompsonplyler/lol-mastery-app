@@ -18,7 +18,7 @@ class BottomChamps extends Component {
                 <h5 className="name-holder">{champName}</h5>
                 <h5 className="champ-level">Mastery Level: {championLevel}</h5>
                 <h5 className="champ-points">Mastery Points: {championPoints}</h5>
-                {championLevel < 7 ? <h5 className="champ-tokens">{`Tokens: ${tokensEarned}`}</h5> : null}
+                {championLevel == (5 || 6) ? <h5 className="champ-tokens">{`Tokens: ${tokensEarned}`}</h5> : null}
             </li>
 
     })
