@@ -16,83 +16,74 @@
   margin: 5px
 }
 
-  .Champion-Info-Container-Top {
+  .Champion-Info-Container {
     background-color: black;
     font-size: calc(10px + 2vmin);
     color: white;
     display: grid;
-    width: 90vw;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    width: 100vw;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr auto; */
     grid-row-gap: 5px;
     grid-column-gap: 5px;
     font-family: "Gill Sans W04", GillSans, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    grid-template-areas: 
+    "top top top"
+    "rest rest rest"
+    "rest rest rest"
   }
 
-  .Champion-Info-Container-Bottom {
-    background-color: black;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    display: grid;
-    list-style: none;
-    width: 90vw;
-    grid-template-columns: 1fr;
-    grid-column-gap: 5px;
-    font-family: "Gill Sans W04", GillSans, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  }
-
-  .Champion-Info-Box {
+  .Champion-Info-Box-Top {
+    grid-area: top;
     background-color: #c7c7c7;
     margin: 5px;
     border: 5px;
     border-style: solid;
     border-color: #9c9c9c;
-  }
-
-  .CIB-Top {
+    /* box-shadow: 2px 2px 2px rgb(212, 212, 212); */
     display: grid;
-    width: 30vw;
-    /* grid-template-rows: repeat(3, 1fr); */
-    /* grid-template-columns: repeat(4, 1fr) ; */
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr) ;
     grid-template-areas: 
     "image name name name"
     "image info info info"
     "image info info info" ;
-    max-width: 500px;
+    max-width: 600px;
     max-height: 300px
 }
 
-  .CIB-Bottom {
-      /* grid-area: rest; */
-      
+  .Champion-Info-Box {
+      grid-area: rest;
+      background-color: #c7c7c7;
       width: 90vw;
-  
+      margin: 5px;
+      border: 5px;
       grid-row: auto;
+      border-style: solid;
+      border-color: #9c9c9c;
       /* box-shadow: 2px 2px 2px rgb(212, 212, 212); */
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr;
+      grid-template-rows: 20px 1fr 20px;
       grid-template-areas:
-      "image name level level points points tokens";
+      "image . . . . . ."
+      "image name level level points points tokens"
+      "image . . . . . .";
       max-height: 100px
       
   }
 
-/* 
-All the following are area descriptions for the CSS grid. 
-
-*/
   .image-holder {
     grid-area: image;
     display: grid
   }
 
   .name-holder {
-    grid-area: name;
+    grid-area: name
   }
 
   .info-holder {
-    grid-area: info;
+    grid-area: info
   }
 
   .champ-tokens {
@@ -107,18 +98,13 @@ All the following are area descriptions for the CSS grid.
     grid-area: level
   }
 
-  /* 
-These next two control the appearance of the mastery badge for the top three champions.
-champion-icon-mastery-top is the code for the emblem.
-champion-icon-mastery is the code for the icon that sits under the emblem. 
-*/
-
-.champ-icon-mastery-top {
+  .champ-icon-mastery-top {
     padding-top: .5vh;
     padding-left: .5vw;
     grid-column: 1;
     grid-row: 1;
     width: 50%;
+    /* max-width: 50% */
   }
 
   .champ-icon-mastery {
@@ -129,21 +115,17 @@ champion-icon-mastery is the code for the icon that sits under the emblem.
     border-radius: 50%;
     width: 42%;
   }
-
-  .champ-icon-mastery-bot {
-    padding-top: .9vh;
-    padding-left: .7vw;
-    grid-column: 1;
-    grid-row: 1;
-    border-radius: 50%;
-    width: 30%;
+  
+  .App-link {
+    color: #61dafb;
   }
-
-  .blue-container{
-    background-color: blue
-  }
-
-  .red-container {
-    background-color: red
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
   

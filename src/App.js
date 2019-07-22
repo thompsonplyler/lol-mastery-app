@@ -2,7 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import C from './data/champion_constants'
+// import C from './data/champion_constants'
 import ChampInfo from "./containers/ChampionInfo"
 // import {
 //   BrowserRouter as Router,
@@ -10,7 +10,7 @@ import ChampInfo from "./containers/ChampionInfo"
 // } from 'react-router-dom';
 // import {withRouter} from 'react-router'
 // import {Redirect} from 'react-router'
-import champions from './data/champion.json'
+// import champions from './data/champion.json'
 
 class App extends Component {
 
