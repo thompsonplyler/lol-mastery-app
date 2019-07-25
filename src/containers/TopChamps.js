@@ -22,7 +22,7 @@ class TopChamps extends Component {
                         Mastery Level: {championLevel}
                         <br/>
                         Mastery Points: {championPoints}<br/>
-                        {championLevel < 7 ? `Tokens: ${tokensEarned}` : null}
+                        {(championLevel === 5 || championLevel === 6) ? `Tokens: ${tokensEarned}` : null}
                     </div>
                 
                 </li>
