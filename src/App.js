@@ -35,6 +35,7 @@ handleSubmit=(event)=> {
       console.log(this.state.region)
       this.setState({mastery_champs:stats})
   }
+  //work?
   )
   .catch(error=>console.log(error))
 }
