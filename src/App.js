@@ -25,7 +25,7 @@ handleSubmit=(event)=> {
   this.setState({submitted: true})
   
   // fetch(`https://nameless-depths-56520.herokuapp.com/api/v1/requests/?summoner_name=${this.state.value}&region=${this.state.region}`,{
-    fetch(`http://localhost:3001/api/v1/requests/?summoner_name=${this.state.value}&region=${this.state.region}`,{
+    fetch(`https://fresh-under-one-sky-email-api.herokuapp.com/api/v1/requests/?summoner_name=${this.state.value}&region=${this.state.region}`,{
   method: "POST",
   mode: "cors",
 
