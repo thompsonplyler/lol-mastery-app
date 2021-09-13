@@ -12,6 +12,12 @@ import ChampInfo from "./containers/ChampionInfo"
 // import {Redirect} from 'react-router'
 // import champions from './data/champion.json'
 
+const environments = {
+  local: "http://localhost:3001",
+  remote: "http://fresh-under-one-sky-email-api.herokuapp.com"
+}
+
+const currentEnvironment = remote
 class App extends Component {
 
   state = {
@@ -35,7 +41,7 @@ handleSubmit=(event)=> {
     submitted: true
   })
   
-  fetch(`https://nameless-depths-56520.herokuapp.com/api/v1/requests/?summoner_name=${this.state.value}`,{
+  fetch(`${currentEnvironment}/api/v1/requests/?summoner_name=${this.state.value}`,{
   method: "POST",
   mode: "cors",
 
